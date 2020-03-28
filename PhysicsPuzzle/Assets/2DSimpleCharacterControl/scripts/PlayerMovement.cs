@@ -36,8 +36,10 @@ public class PlayerMovement : MonoBehaviour {
 	private Transform prevPlatform;
 
     public SpriteRenderer mySpriteRenderer;
+    public SpriteRenderer myWeaponSpriteRenderer;
 
-	float x;
+    public GameObject box; 
+    float x;
 	void Awake(){
 
 		currentSpeed = 0;
@@ -57,10 +59,12 @@ public class PlayerMovement : MonoBehaviour {
         if (PlayerStates.moveRight)
         {
             mySpriteRenderer.flipX = true;
+            myWeaponSpriteRenderer.flipX = false;
         }
         else
         {
             mySpriteRenderer.flipX = false;
+            myWeaponSpriteRenderer.flipX = true;
         }
        
 
@@ -461,4 +465,12 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Plate") 
+        {
+            box.SetActive(true);
+        
+        }
+    }
 }
