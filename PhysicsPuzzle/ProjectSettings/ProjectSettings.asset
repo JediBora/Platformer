@@ -611,10 +611,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 121d09e7-9ff5-4e22-960c-e1e9fbec962d
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: PhysicsPuzzle
+  organizationId: boraocal
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

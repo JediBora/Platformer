@@ -9,6 +9,19 @@ TagManager:
   - Door
   - PlayerVision
   - Plate
+  - WP
+  - topHat
+  - bandana
+  - rifle
+  - shotgun
+  - CP1
+  - CP2
+  - CP3
+  - Enemy
+  - GroundEnemy
+  - Enemy1
+  - Enemy2
+  - GroundEnemy1
   layers:
   - Default
   - TransparentFX
