@@ -11,6 +11,7 @@ public class AnimationScript : MonoBehaviour
     public GameObject palette1;
     public GameObject palette2;
     bool isActivated = false;
+    public bool fired = false;
     void Start()
     {
 
@@ -21,20 +22,21 @@ public class AnimationScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-
+            //when I shoot change animation to shooting and set the collision to active to destroy the enemies
             shotgunAnim.SetBool("Shot", shot = true);
             rifleAnim.SetBool("Shot", shot = true);
             palette1.SetActive(true);
             palette2.SetActive(true);
             isActivated = true;
+            fired = true;
         }
         else
         {
-           
+           //when I stop shooting change animation to idle
            
             shotgunAnim.SetBool("Shot", shot = false);
             rifleAnim.SetBool("Shot", shot = false);
-            
+            fired = false;
         }
         if (isActivated) 
         {
@@ -44,7 +46,7 @@ public class AnimationScript : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        print("wait");
+       //wait fow 0.9 seconds 
         yield return new WaitForSeconds(0.9f);
         palette1.SetActive(false);
         palette2.SetActive(false);

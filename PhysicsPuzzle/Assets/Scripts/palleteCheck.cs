@@ -29,26 +29,27 @@ public class palleteCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            //if the bullet collides with the enemy destroy the enemy
             Destroy(flyingEnemy);
         }
         if (collision.gameObject.tag == "GroundEnemy")
         {
-            print("hit enemy");
+            //if the bullet collides with the enemy destroy the enemy
             Destroy(groundEnemy);
         }
         if (collision.gameObject.tag == "GroundEnemy1")
         {
-            print("hit enemy");
+            //if the bullet collides with the enemy destroy the enemy
             Destroy(groundEnemy1);
         } 
         if (collision.gameObject.tag == "Enemy1")
         {
-            print("hit enemy");
+            //if the bullet collides with the enemy destroy the enemy
             Destroy(flyingEnemy1);
         }
         if (collision.gameObject.tag == "Enemy2")
         {
-            print("hit enemy");
+            //if the bullet collides with the enemy destroy the enemy
             Destroy(flyingEnemy2);
         }
 

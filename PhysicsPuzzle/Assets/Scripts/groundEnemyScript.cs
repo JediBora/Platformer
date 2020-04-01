@@ -32,40 +32,48 @@ public class groundEnemyScript : MonoBehaviour
 
         if (playerScript.topHatHealth == 4)
         {
+            //decrease the heart limit
             thHeart5.SetActive(false);
 
         }
         if (playerScript.topHatHealth == 3)
         {
+            //decrease the heart limit
             thHeart4.SetActive(false);
 
         }
         if (playerScript.topHatHealth == 2)
         {
+            //decrease the heart limit
             thHeart3.SetActive(false);
 
         }
         if (playerScript.bandanaHealth == 2)
         {
+            //decrease the heart limit
             bHeart3.SetActive(false);
         }
         if (playerScript.topHatHealth == 1)
         {
+            //decrease the heart limit
             thHeart2.SetActive(false);
 
         }
         if (playerScript.bandanaHealth == 1)
         {
+            //decrease the heart limit
             bHeart2.SetActive(false);
 
         }
         if (playerScript.topHatHealth <= 0)
         {
+            //decrease the heart limit and switch to GameOver
             thHeart1.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
         if (playerScript.bandanaHealth <= 0)
         {
+            //decrease the heart limit and switch to GameOver
             bHeart1.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
@@ -82,7 +90,7 @@ public class groundEnemyScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player")
         {
-            print("test");
+
             if (playerScript.bandanaActivated)
             {
                 playerScript.bandanaHealth -= 1;

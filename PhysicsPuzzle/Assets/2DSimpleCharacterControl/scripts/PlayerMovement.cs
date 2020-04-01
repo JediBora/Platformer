@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float wallMargin = 0.1f;
 
     //Player states
-    private bool jumpPress = false;
+    public bool jumpPress = false;
     private bool movePress = false;
 
     //current states
@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool topHatActivated = false;
     public bool bandanaActivated = false;
+   
     float x;
     void Awake()
     {

@@ -31,46 +31,55 @@ public class enemyScript : MonoBehaviour
     {
         if (vision.objectsInVolume.Count > 0) 
         {
+            //if the player is on the range move towards the player
           transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
          
         }
   
         if (playerScript.topHatHealth == 4)
         {
+            //decrease the heart limit
             thHeart5.SetActive(false);
 
         }
         if ( playerScript.topHatHealth == 3)
         {
+            //decrease the heart limit
             thHeart4.SetActive(false);
 
         }
         if (playerScript.topHatHealth == 2) 
         {
+            //decrease the heart limit
             thHeart3.SetActive(false);
         
         }
         if (playerScript.bandanaHealth == 2) 
         {
+            //decrease the heart limit
             bHeart3.SetActive(false);
         }
         if( playerScript.topHatHealth ==1)
         {
+            //decrease the heart limit
             thHeart2.SetActive(false);
 
         }
         if (playerScript.bandanaHealth == 1) 
         {
+            //decrease the heart limit
             bHeart2.SetActive(false);
         
         }
        if( playerScript.topHatHealth <=0) 
         {
+            //decrease the heart limit and show the GameOver scene
             thHeart1.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
         if (playerScript.bandanaHealth <= 0) 
         {
+            //decrease the heart limit and show the GameOver scene
             SceneManager.LoadScene("GameOver");
             bHeart1.SetActive(false);
         }
@@ -79,6 +88,7 @@ public class enemyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") 
         {
+            //if enemy collides with the player decrease the health of the player
             //print("test");
             if (playerScript.bandanaActivated) 
             {
