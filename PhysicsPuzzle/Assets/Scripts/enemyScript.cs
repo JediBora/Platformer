@@ -75,12 +75,12 @@ public class enemyScript : MonoBehaviour
         {
             //decrease the heart limit and show the GameOver scene
             thHeart1.SetActive(false);
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("MainMenu");
         }
         if (playerScript.bandanaHealth <= 0) 
         {
             //decrease the heart limit and show the GameOver scene
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("MainMenu");
             bHeart1.SetActive(false);
         }
     }

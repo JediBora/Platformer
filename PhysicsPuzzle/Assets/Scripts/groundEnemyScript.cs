@@ -69,13 +69,13 @@ public class groundEnemyScript : MonoBehaviour
         {
             //decrease the heart limit and switch to GameOver
             thHeart1.SetActive(false);
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("MainMenu");
         }
         if (playerScript.bandanaHealth <= 0)
         {
             //decrease the heart limit and switch to GameOver
             bHeart1.SetActive(false);
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("MainMenu");
         }
     }
     void MoveTowardWaypoint()

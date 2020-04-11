@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerParams))]
 public class PlayerMovement : MonoBehaviour
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool topHatActivated = false;
     public bool bandanaActivated = false;
-   
+
     float x;
     void Awake()
     {
@@ -583,36 +584,39 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Plate")
         {
-            box.SetActive(true);
+            box.GetComponent<SpriteRenderer>().enabled = true;
 
         }
 
         if (collision.gameObject.tag == "bandana")
         {
-            bandana.SetActive(true);
+            bandana.GetComponent<SpriteRenderer>().enabled = true;
             bandanaHeart.SetActive(true);
             bandanaActivated = true;
         }
 
         if (collision.gameObject.tag == "topHat")
         {
-            topHat.SetActive(true);
+            topHat.GetComponent<SpriteRenderer>().enabled = true;
             topHatHeart.SetActive(true);
+
             topHatActivated = true;
         }
 
         if (collision.gameObject.tag == "rifle")
         {
-            rifle.SetActive(true);
+            myRifleSpriteRenderer.enabled = true;
         }
 
         if (collision.gameObject.tag == "shotgun")
         {
-            shotgun.SetActive(true);
+            myShotgunSpriteRenderer.enabled = true;
+
         }
 
         if (collision.gameObject.tag == "CP1")
@@ -624,9 +628,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = spawnPos1.transform.position;
         }
-        if(collision.gameObject.tag == "Door") 
+        if (collision.gameObject.tag == "Door")
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("MainMenu");
         }
     }
+
 }

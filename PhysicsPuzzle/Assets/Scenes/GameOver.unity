@@ -373,6 +373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6692b28191a33499cfb5bee815eb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+  sampleScene: 0
+  deuterBool: 0
+  protanBool: 0
+  tritanBool: 0
 --- !u!4 &746847734
 Transform:
   m_ObjectHideFlags: 0
